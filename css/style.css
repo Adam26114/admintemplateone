@@ -124,4 +124,26 @@ body{
 .borderends{
     border-right:3px solid skyblue;
 }
+
+/*  Start pagination */
+.pagination>li>a,
+.pagination>li>span{
+    color:#000;
+    border:1 solid silver;
+}
+
+.pagination>li.active>a{
+    background-color:gray;
+    color:#fff;
+    border:1px solid gray;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover{
+    background-color:#eee;
+    color:#000;
+    border-color:ddd;
+}
+
+/*  End pagination */
 /* End User Permission */
