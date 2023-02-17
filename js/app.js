@@ -30,6 +30,10 @@ $(document).ready(function(){
 				}
 		});
 		//End User Permission
+
+		$('#datepicker').datepicker({
+			numberOfMonths: 3
+		  });
 });
 
 
@@ -83,23 +87,38 @@ function drawTitleSubtitle() {
 		}
 //End Viewer Report
 
-// Start Sale analysis 
+// Start Sale Analysis
+
 const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-  type: 'doughnut', //bar,pie,line,doughnut,radar,polarArea,scatter
-  data: {
-    labels: ['Cash', 'Visa', 'MPU', 'Mobile Banking'],
-    datasets: [{
-      label: '# of Votes',
-      data: [40, 10, 20, 30],
-      // borderWidth: 1
-    }]
-  },
+  new Chart(ctx, {
+    type: 'doughnut',  //bar,pie,line,doughnut,radar,polar,scatter
+    data: {
+      labels: ['Cash', 'Vis', 'MPU', 'Mobile Banking'],
+      datasets: [{
+        label: '# of Votes',
+        data: [40, 10, 20, 30],
+        // borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
 
-});
+// End Sale Analysis
 
-// End sale Analysis
+// Start Footer
+const getyear = document.getElementById('getyear');
+const getfullyear = new Date().getFullYear();
+getyear.textContent = getfullyear;
 
 
-// 6MU   
+// End Footer
+
+
+// 17GG   
